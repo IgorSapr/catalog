@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(231, 231, 231);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 1700px;
+}
+
+.catalog-box {
+  max-width: 1100px;
+}
+
+.catalog-box__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0D1117;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 279px;
+  background-color: white;
+}
+
+.card__img {
+  margin-bottom: 25px;
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0D1117;
+}
+
+
+.card__desc {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #919498;
+}
+
+.card__span {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0D1117;
+}
+
+.btn {
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 16px;
+  background-color: rgb(2, 145, 2);
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid rgb(2, 145, 2);
+}
+
+.btn:hover {
+  outline: none;
+  background-color: rgb(7, 194, 7);
+}
+
+.btn:active {
+  outline: none;
+  background-color: rgb(2, 104, 2);
+}
+
+/* Корзина */
+.basket-box {
+  position: relative;
+  width: 35%;
+  height: 100vh;
+}
+
+.basket-box__menu {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: calc(100% - 150px);
+  background-color: white;
+}
+
+/* Класс для скрытия */
+.basket-box__menu.hide {
+  display: none;
+}
+
+/* Список корзины */
+.basket-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  height: calc(100% - 61px);
+}
+
+/* Кнопка корзины с общей ценой */
+.basket-box__menu--btn {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+  border: none;
+  outline: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(251, 3, 3);
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+}
+
+.basket-box__menu--btn:focus-visible {
+  outline: 1px solid rgb(139, 3, 3);
+}
+
+.basket-box__menu--btn:hover {
+  outline: none;
+  background-color: rgb(240, 80, 80);
+}
+
+.basket-box__menu--btn:active {
+  outline: none;
+  background-color: rgb(139, 3, 3);
+}
+
+.basket-box__menu--btn-span {
+  margin-left: 10px;
+}
+
+/* Пустая корзина */
+.basket-list__item--empty {
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.basket-list__text {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #808ea4;
+}
+
+/* Кнопка открытия корзины */
+.basket-btn {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(2, 145, 2);
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+
+.basket-btn__img {
+  width: 50px;
+  height: 50px;
+}
+
+.basket-btn:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid rgb(2, 145, 2);
+}
+
+.basket-btn:hover {
+  outline: none;
+  background-color: rgb(7, 194, 7);
+}
+
+.basket-btn:active {
+  outline: none;
+  background-color: rgb(2, 104, 2);
+}
+
+/* Cписок коризны */
+.basket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0;
+  padding: 30px;
+  list-style-type: none;
+  overflow: auto;
+}
+
+.card-basket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+
+.card-basket__img {
+  width: 15%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-basket__wrap {
+  padding: 10px;
+  width: 60%;
+}
+
+.card-basket__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0D1117;
+}
+
+.card-basket__span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0D1117;
+}
+
+.card-basket__btn {
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 0 18px;
+  height: 40px;
+  font-size: 14px;
+  color: white;
+  background-color: rgb(131, 131, 131);
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-basket__btn:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid rgb(76, 75, 75);
+}
+
+.card-basket__btn:hover {
+  outline: none;
+  background-color: rgb(174, 172, 172);
+}
+
+.card-basket__btn:active {
+  outline: none;
+  background-color: rgb(76, 75, 75);
+}
